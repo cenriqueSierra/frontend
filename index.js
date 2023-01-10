@@ -1,18 +1,18 @@
-require('./models/routes')
-const express = require('express')
-const path = require('path')
-const handlebars = require('handlebars')
-const exphbs = require('express-handlebars')
-const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
-const bodyparser = require('body-parser')
+require('./models/routes');
+const express = require('express');
+const path = require('path');
+const handlebars = require('handlebars');
+const exphbs = require('express-handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+const bodyparser = require('body-parser');
 const { engine } = require('express-handlebars');
-const routes_controller = require('./controllers/routes_controller')
+const routes_controller = require('./controllers/routes_controller');
 
 var app = express();
 
 
-app.use(bodyparser.urlencoded({extended: false}))
-app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.json());
 
 app.get('/', (req, res) => {
     res.send(`

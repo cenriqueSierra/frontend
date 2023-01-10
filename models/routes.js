@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://cesierra:<password>@cluster0.lcj6yle.mongodb.net/?retryWrites=true&w=majority', {
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI ||'mongodb+srv://cesierra:Sierra-Mongo@cluster0.lcj6yle.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 },
 (err) => {

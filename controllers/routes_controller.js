@@ -1,7 +1,7 @@
-const express = require("express")
-var router = express.Router()
-const mongoose = require("mongoose")
-const Routes = mongoose.model("Routes")
+const express = require("express");
+var router = express.Router();
+const mongoose = require("mongoose");
+const Routes = mongoose.model("Routes");
 
 router.get("/", (req,res) => {
     res.render("router/crud", {
@@ -19,13 +19,13 @@ router.post('/', (req,res) => {
 
 function insertRecord(req, res){
     var route = new Routes()
-    route.ip = req.body.ip
-    route.origin = req.body.origin
-    route.metric = req.body.metric
-    route.localpref = req.body.localpref
-    route.valid = req.body.valid
-    route.internal = req.body.internal
-    route.date = req.body.date
+    route.ip = req.body.ip;
+    route.origin = req.body.origin;
+    route.metric = req.body.metric;
+    route.localpref = req.body.localpref;
+    route.valid = req.body.valid;
+    route.internal = req.body.internal;
+    route.date = req.body.date;
     route.save((err, doc) => {
         if (!err) {
             res.redirect("router/list")
@@ -80,4 +80,4 @@ router.get("/delete/:id", (req,res) => {
     });
 });
 
-module.exports = router
+module.exports = router;

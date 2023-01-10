@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 var routerSchema = new mongoose.Schema({
     ip: { type: String, required: ' This field is required', },
