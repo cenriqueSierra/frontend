@@ -7,6 +7,9 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 const bodyparser = require('body-parser');
 const { engine } = require('express-handlebars');
 const routes_controller = require('./controllers/routes_controller');
+const mongoose = require("mongoose");
+
+mongoose.set('strictQuery', true);
 
 var app = express();
 
