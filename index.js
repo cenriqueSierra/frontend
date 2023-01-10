@@ -10,6 +10,8 @@ const routes_controller = require('./controllers/routes_controller')
 
 var app = express();
 
+mongoose.set('strictQuery', true);
+
 app.use(bodyparser.urlencoded({extended: false}))
 app.use(bodyparser.json())
 

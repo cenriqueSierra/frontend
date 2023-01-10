@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/router_db', {
+mongoose.connect('mongodb+srv://cesierra:<password>@cluster0.lcj6yle.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 },
 (err) => {
